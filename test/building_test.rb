@@ -30,11 +30,17 @@ class BuildingTest < Minitest::Test
     end
 
     def test_it_can_add_renters
-      building = Building.new
-      renter1 = Renter.new("Jack")
-      unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
 
-      assert_equal [renter1], building.add_renter(renter1)
+      building = Building.new
+      renter1 = Renter.new("Aurora")
+      unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
+      building.add_unit(unit1)
+      unit1.add_renter(renter1)
+      building.add_renter(renter1)
+
+
+
+      assert_equal ["Aurora"], building.add_renter
     end
 
 
