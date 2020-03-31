@@ -17,6 +17,8 @@ class Building
 
 
   def add_renter(renter)
+    binding.pry
+    #need to access the name element within the array
     @renters << renter.name
   end
 
