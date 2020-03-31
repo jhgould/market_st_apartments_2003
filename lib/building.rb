@@ -2,21 +2,26 @@
 
 
 class Building
-  attr_reader :units, :renters
+  attr_reader :units
+  attr_accessor :renter
 
   def initialize(units = [])
     @units = units
     @renters = []
   end
 
+
   def add_unit(unit)
     @units << unit
   end
 
+
   def add_renter(renter)
-    @renters << renter
+    @renters << renter.name
   end
 
 
-  
+
+
+
 end
