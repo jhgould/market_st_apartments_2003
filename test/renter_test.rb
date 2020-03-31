@@ -5,6 +5,7 @@ require './lib/renter'
 
 
 class RenterTest < Minitest::Test
+
   def test_it_exists
 
     renter = Renter.new('Jack')
@@ -13,7 +14,7 @@ class RenterTest < Minitest::Test
   end
 
   def test_it_has_readable_attributes
-    skip
+    
     renter = Renter.new('Jack')
 
     assert_equal 'Jack', renter.name
