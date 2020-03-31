@@ -1,5 +1,5 @@
 # apartment class
-
+require './lib/renter'
 
 class Apartment
   attr_reader :number, :monthly_rent, :bathrooms, :bedrooms, :renter
@@ -16,6 +16,8 @@ class Apartment
 
   end
 
-
+  def add_renter(renter)
+    @renter = renter
+  end
 
 end
