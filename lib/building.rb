@@ -7,7 +7,6 @@ class Building
 
   def initialize(units = [])
     @units = units
-    @renters = []
   end
 
 
